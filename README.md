@@ -1,2 +1,2 @@
 # Wordle-Solver
-A simple autosolver for wordlecup.io
+A simple autosolver extension for wordlecup.io

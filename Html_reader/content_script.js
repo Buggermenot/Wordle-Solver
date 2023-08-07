@@ -50,50 +50,6 @@ function sendWord(guess) {
   }, 100);
 }
 
-// function solveWordle(array) {
-//   let correct = ['', '', '', '', ''];
-//   let no = ["", "", "", "", ""];
-
-//   var finished = false;
-//   for (let row = 0; row < 5; row++) {
-//     let guess = nextGuess(correct, no, array);
-//     console.log("Guessed:", guess[0]);
-//     sendWord(guess[0]);
-
-//     const tablePromise = new Promise((resolve) => {
-//       setTimeout(function () {
-//         var table = getPageHTML(row);
-//         resolve(table);
-//       }, 100);
-//     });
-
-//     // Use async/await to wait for the table data to be fetched
-//     (async function () {
-//       var table = await tablePromise;
-//       console.log("Checkup");
-//       for (let i = 0; i < 5; i++) {
-//         var param = table[row].childNodes[i]["ariaLabel"].split(": ");
-//         var letter = param[0].toLowerCase();
-//         var status = param[1];
-
-//         if (status == "correct") correct[i] = letter;
-//         else if (status == "elsewhere") {
-//           no[i] += letter;
-//           finished = false;
-//         } else if (status == "no") {
-//           for (let j = 0; j < 5; j++) {
-//             no[i] += letter;
-//           }
-//           finished = false;
-//         }
-//       }
-//       console.log("Finished:", finished);
-//       if (finished) return;
-//     })();
-//     if (finished) break;
-//   }
-// }
-
 function solveWordle(array) {
   let correct = ['', '', '', '', ''];
   let no = ["", "", "", "", ""];
